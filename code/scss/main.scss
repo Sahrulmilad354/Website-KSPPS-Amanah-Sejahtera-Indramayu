@@ -1,0 +1,467 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Ubuntu:wght@400;700&display=swap");
+
+// Variabel
+$primaryColor: #da251c;
+$secondaryColor: #45916b;
+$tertiaryColor: #fcf50a;
+$textColor: rgb(29, 29, 29);
+
+// Body
+body {
+  padding-top: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+// Mixin 1
+@mixin tombol {
+  display: inline-block;
+  color: $tertiaryColor;
+  background-color: $primaryColor;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+}
+
+// Mixin 2
+@mixin tombol-1 {
+  display: inline-block;
+  color: $tertiaryColor;
+  background-color: $primaryColor;
+  border-radius: 50em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  font-size: 50%;
+  font-family: "Sriracha", cursive;
+}
+
+// Mixin 3 - Ikon Footer
+@mixin tombol-2 {
+  display: inline-block;
+  color: $primaryColor;
+  background-color: white;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  font-size: 100%;
+}
+
+// Mixin 4 - Button Login
+@mixin tombol-3 {
+  display: inline-block;
+  color: $tertiaryColor;
+  background-color: $primaryColor;
+  border-radius: 50em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  font-size: 90%;
+}
+
+// Navbar
+.custom-nav {
+  font-family: "Sriracha", cursive;
+  .navbar-brand {
+    img {
+      width: 340px;
+      height: 50px;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all 1s;
+      }
+    }
+  }
+  #navbarScroll {
+    .navbar-nav {
+      .nav-item {
+        .nav-login {
+          @include tombol-3;
+          margin-left: 1em;
+
+          &:hover {
+            color: $primaryColor;
+            border-radius: 0.5em;
+            border: 1px solid $primaryColor;
+            background-color: white;
+            padding: 0.5em 1.5em;
+            transition: all 1s;
+          }
+        }
+        .nav-link {
+          color: $primaryColor;
+          font-weight: 700;
+          margin-left: 1em;
+          border-radius: 50em;
+          border: 1px solid transparent;
+          transition: 0.5s color ease;
+          font-size: 80%;
+
+          &:hover {
+            color: #fcf50a;
+            border-radius: 0.5em;
+            border: 1px solid $primaryColor;
+            background-color: $primaryColor;
+            padding: 0.5em 1.5em;
+            transition: all 1s;
+          }
+        }
+      }
+    }
+
+    li {
+      ul {
+        li {
+          font-size: 80%;
+        }
+      }
+    }
+  }
+}
+
+// Intro
+.intro {
+  img {
+    &:hover {
+      transform: scale(1.5);
+      transition: all 1s;
+    }
+  }
+
+  h3 {
+    color: $primaryColor;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  a {
+    @include tombol;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: $tertiaryColor;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// Header
+.header {
+  a {
+    @include tombol;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: $tertiaryColor;
+    }
+  }
+}
+
+// Katalog
+.katalog {
+  display: grid;
+  grid-template-areas:
+    "produk-edukasi produk-edukasi alat-ibadah"
+    "pakaian pakaian alat-dapur"
+    "herbal kecantikan kecantikan";
+
+  gap: 10px;
+
+  // Produk Edukasi
+  .produk-edukasi {
+    grid-area: produk-edukasi;
+    min-height: 30%;
+    background-color: aqua;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/01.jpg);
+    background-size: cover;
+    margin-top: 5rem;
+  }
+
+  // Alat Ibadah
+  .alat-ibadah {
+    grid-area: alat-ibadah;
+    min-height: 150px;
+    background-color: salmon;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/02.jpg);
+    background-size: cover;
+    margin-top: 5rem;
+  }
+
+  // Pakaian
+  .pakaian {
+    grid-area: pakaian;
+    min-height: 200px;
+    background-color: aquamarine;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // Alat Dapur
+  .alat-dapur {
+    grid-area: alat-dapur;
+    min-height: 200px;
+    background-color: bisque;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/04.jpg);
+    background-size: cover;
+  }
+
+  // Kecantikan
+  .kecantikan {
+    grid-area: kecantikan;
+    min-height: 100px;
+    background-color: black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/06.jpg);
+    background-size: cover;
+    margin-bottom: 3rem;
+  }
+
+  // Herbal
+  .herbal {
+    grid-area: herbal;
+    min-height: 100px;
+    background-color: brown;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 1em;
+    background-image: url(../../img/katalog/05.jpg);
+    background-size: cover;
+    margin-bottom: 3rem;
+  }
+}
+
+// Mengapa Kami
+.mengapa-kami {
+  h2 {
+    color: $primaryColor;
+    font-family: "Sriracha", cursive;
+    margin-top: 3rem;
+  }
+
+  img {
+    &:hover {
+      transform: scale(1.1);
+      transition: all 1s;
+    }
+  }
+}
+
+// Kontak
+.kontak {
+  height: 350px;
+  background-image: url(../../img/kontak/01.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 0;
+  margin-top: 5rem;
+  padding: 3rem;
+
+  h6 {
+    font-family: "Sriracha", cursive;
+    color: $primaryColor;
+    padding-top: 10px;
+
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+
+  a {
+    @include tombol-2;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: $tertiaryColor;
+      transform: rotate(360deg);
+    }
+  }
+
+  iframe {
+    border-radius: 0px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 1s;
+    }
+  }
+}
+
+// Footer
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+// RESPONSIBILITY UKURAN EXTRA SMALL (SMARTPHONE)
+@media (max-width: 480px) {
+  // Navbar
+  .custom-nav {
+    font-family: "Sriracha", cursive;
+    .navbar-brand {
+      img {
+        width: 200px;
+        height: 30px;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: all 1s;
+        }
+      }
+    }
+  }
+
+  // Intro
+  .intro {
+    img {
+      width: 70%;
+    }
+  }
+
+  // Produk Terbaik {
+  .custom-produk {
+    h2 {
+      font-size: 130%;
+      margin-top: 1rem;
+    }
+
+    a {
+      @include tombol-1;
+      border: 1px solid transparent;
+      transition: 0.5s ease;
+
+      &:hover {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: $tertiaryColor;
+      }
+    }
+
+    .modal {
+      img {
+        width: 50%;
+      }
+
+      td,
+      th {
+        font-size: 80%;
+      }
+    }
+  }
+
+  // Kontak
+  .kontak {
+    height: 200px;
+    background-image: url(../../img/kontak/01.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    margin-top: 5rem;
+    padding: 1rem;
+
+    h6 {
+      font-family: "Sriracha", cursive;
+      color: $primaryColor;
+      padding-top: 10px;
+
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+
+    a {
+      @include tombol-2;
+      border: 1px solid transparent;
+      transition: 0.5s ease;
+
+      &:hover {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: $tertiaryColor;
+        transform: rotate(360deg);
+      }
+    }
+
+    iframe {
+      border-radius: 0px;
+      width: 200px;
+      height: 100px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 1s;
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    h6,
+    p {
+      font-size: 0.5rem;
+    }
+  }
+}
+// RESPONSIBILITY UKURAN SMALL (LANDSCAPE SAMARTPHONE)
+
+// RESPONSIBILITY UKURAN MEDIUM (TABLET)
+@media (max-width: 991px) {
+  // Produk Terbaik
+  .custom-produk {
+    .modal {
+      img {
+        width: 100%;
+      }
+
+      td,
+      th {
+        font-size: 80%;
+      }
+    }
+  }
+}
+// RESPONSIBILITY UKURAN LARGE (DEKSTOP)

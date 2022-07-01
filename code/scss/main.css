@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Ubuntu:wght@400;700&display=swap");
+body {
+  padding-top: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-nav {
+  font-family: "Sriracha", cursive;
+}
+
+.custom-nav .navbar-brand img {
+  width: 340px;
+  height: 50px;
+}
+
+.custom-nav .navbar-brand img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.custom-nav #navbarScroll .navbar-nav .nav-item .nav-login {
+  display: inline-block;
+  color: #fcf50a;
+  background-color: #da251c;
+  border-radius: 50em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  font-size: 90%;
+  margin-left: 1em;
+}
+
+.custom-nav #navbarScroll .navbar-nav .nav-item .nav-login:hover {
+  color: #da251c;
+  border-radius: 0.5em;
+  border: 1px solid #da251c;
+  background-color: white;
+  padding: 0.5em 1.5em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.custom-nav #navbarScroll .navbar-nav .nav-item .nav-link {
+  color: #da251c;
+  font-weight: 700;
+  margin-left: 1em;
+  border-radius: 50em;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s color ease;
+  transition: 0.5s color ease;
+  font-size: 80%;
+}
+
+.custom-nav #navbarScroll .navbar-nav .nav-item .nav-link:hover {
+  color: #fcf50a;
+  border-radius: 0.5em;
+  border: 1px solid #da251c;
+  background-color: #da251c;
+  padding: 0.5em 1.5em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.custom-nav #navbarScroll li ul li {
+  font-size: 80%;
+}
+
+.intro img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.intro h3 {
+  color: #da251c;
+}
+
+.intro p {
+  text-align: justify;
+}
+
+.intro a {
+  display: inline-block;
+  color: #fcf50a;
+  background-color: #da251c;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.intro a:hover {
+  color: #da251c;
+  border: 1px solid #da251c;
+  background-color: #fcf50a;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header a {
+  display: inline-block;
+  color: #fcf50a;
+  background-color: #da251c;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.header a:hover {
+  color: #da251c;
+  border: 1px solid #da251c;
+  background-color: #fcf50a;
+}
+
+.katalog {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "produk-edukasi produk-edukasi alat-ibadah" "pakaian pakaian alat-dapur" "herbal kecantikan kecantikan";
+  gap: 10px;
+}
+
+.katalog .produk-edukasi {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: produk-edukasi;
+  min-height: 30%;
+  background-color: aqua;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/01.jpg);
+  background-size: cover;
+  margin-top: 5rem;
+}
+
+.katalog .alat-ibadah {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: alat-ibadah;
+  min-height: 150px;
+  background-color: salmon;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/02.jpg);
+  background-size: cover;
+  margin-top: 5rem;
+}
+
+.katalog .pakaian {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: pakaian;
+  min-height: 200px;
+  background-color: aquamarine;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.katalog .alat-dapur {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: alat-dapur;
+  min-height: 200px;
+  background-color: bisque;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/04.jpg);
+  background-size: cover;
+}
+
+.katalog .kecantikan {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: kecantikan;
+  min-height: 100px;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/06.jpg);
+  background-size: cover;
+  margin-bottom: 3rem;
+}
+
+.katalog .herbal {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: herbal;
+  min-height: 100px;
+  background-color: brown;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+  border-radius: 1em;
+  background-image: url(../../img/katalog/05.jpg);
+  background-size: cover;
+  margin-bottom: 3rem;
+}
+
+.mengapa-kami h2 {
+  color: #da251c;
+  font-family: "Sriracha", cursive;
+  margin-top: 3rem;
+}
+
+.mengapa-kami img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.kontak {
+  height: 350px;
+  background-image: url(../../img/kontak/01.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 0;
+  margin-top: 5rem;
+  padding: 3rem;
+}
+
+.kontak h6 {
+  font-family: "Sriracha", cursive;
+  color: #da251c;
+  padding-top: 10px;
+}
+
+.kontak h6:hover {
+  color: #45916b;
+}
+
+.kontak a {
+  display: inline-block;
+  color: #da251c;
+  background-color: white;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  font-size: 100%;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.kontak a:hover {
+  color: #da251c;
+  border: 1px solid #da251c;
+  background-color: #fcf50a;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.kontak iframe {
+  border-radius: 0px;
+}
+
+.kontak iframe:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .custom-nav {
+    font-family: "Sriracha", cursive;
+  }
+  .custom-nav .navbar-brand img {
+    width: 200px;
+    height: 30px;
+  }
+  .custom-nav .navbar-brand img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .intro img {
+    width: 70%;
+  }
+  .custom-produk h2 {
+    font-size: 130%;
+    margin-top: 1rem;
+  }
+  .custom-produk a {
+    display: inline-block;
+    color: #fcf50a;
+    background-color: #da251c;
+    border-radius: 50em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    font-size: 50%;
+    font-family: "Sriracha", cursive;
+    border: 1px solid transparent;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .custom-produk a:hover {
+    color: #da251c;
+    border: 1px solid #da251c;
+    background-color: #fcf50a;
+  }
+  .custom-produk .modal img {
+    width: 50%;
+  }
+  .custom-produk .modal td,
+  .custom-produk .modal th {
+    font-size: 80%;
+  }
+  .kontak {
+    height: 200px;
+    background-image: url(../../img/kontak/01.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+  .kontak h6 {
+    font-family: "Sriracha", cursive;
+    color: #da251c;
+    padding-top: 10px;
+  }
+  .kontak h6:hover {
+    color: #45916b;
+  }
+  .kontak a {
+    display: inline-block;
+    color: #da251c;
+    background-color: white;
+    border-radius: 50em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-family: "Sriracha", cursive;
+    font-size: 100%;
+    border: 1px solid transparent;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .kontak a:hover {
+    color: #da251c;
+    border: 1px solid #da251c;
+    background-color: #fcf50a;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  .kontak iframe {
+    border-radius: 0px;
+    width: 200px;
+    height: 100px;
+  }
+  .kontak iframe:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer h6,
+  .footer p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .custom-produk .modal img {
+    width: 100%;
+  }
+  .custom-produk .modal td,
+  .custom-produk .modal th {
+    font-size: 80%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
